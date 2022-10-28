@@ -1,0 +1,178 @@
+/* GENERAL MAIN BODY STUFF */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0 auto;
+    font-family: "Montserrat";
+    background-image: url(lines.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* NAVBAR ELEMENTS */
+
+.nav {
+    padding: 5vh 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav > h1 {
+    font-family: "Raleway";
+    font-weight: 700;
+}
+
+h1 {
+    font-family: "Raleway";
+    font-weight: 700;
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    justify-content: space-around;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: border-bottom 250ms ease;
+    border-radius: 5px;
+}
+
+ul > a:hover {
+    border-bottom: 5px solid #14A322;
+}
+
+/* MIDDLE CONTAINER ELEMENTS */
+
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.section {
+    width: 25%;
+    display: grid;
+    gap: 20px;
+}
+
+.section > h1 {
+    font-size: 48px;
+}
+
+.boxes {
+    display: flex;
+    gap: 20px;
+}
+
+.small {
+    display: grid;
+    gap: 20px;
+}
+
+
+.small > .box {
+    width: 150px;
+}
+
+.box {
+    width: 250px;
+    height: 100%;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.box:nth-child(1) {
+    background: #A3E798;
+}
+.small .box:nth-child(1) {
+    background: #84D891;
+}
+.small .box:nth-child(2) {
+    background: #AEF5B1;
+}
+
+.box > p {
+    margin: 0;
+}
+
+.box > a {
+    color: black;
+    text-decoration: none;
+    font-family: "Raleway";
+}
+
+.box > a:hover {
+    text-decoration: underline;
+}
+
+#big {
+    font-size: 24px;
+}
+
+#space {
+    display: grid;
+    align-items: space-between;
+}
+
+span {
+    color: #14A322;
+}
+
+button {
+    width: 175px;
+    height: 75px;
+    background: #B0F4C3;
+    border-radius: 25px;
+    border: 1px solid black;
+    font-size: 24px;
+    box-shadow: 0px 10px #426D3B;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0px 5px #426D3B;
+    transform: translateY(5px);
+}
+
+/* GENERAL MOBILE VIEW MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        gap: 50px;
+        height: auto;
+    }
+    .section {
+        width: 100%;
+    }
+    .boxes {
+        width: 100%;
+        display: grid;
+    }
+    .box {
+        width: 100%;
+    }
+    .small {
+        display: flex;
+    }
+    .small > .box {
+        width: auto;
+    }
+    .nav {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+}
